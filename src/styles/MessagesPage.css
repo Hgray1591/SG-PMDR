@@ -1,0 +1,155 @@
+/* Messages Modal */
+.messages-modal {
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  height: 560px;
+  margin: 0px;
+  overflow-y: auto;
+  user-select: none;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.messages-modal.animate {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Messages Header */
+.messages-header {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.messages-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.message-category {
+  margin-bottom: 5px;
+}
+
+.message-category-title {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.message-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.message-text {
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-right: 3px;
+}
+
+.edit-message-button {
+  border: none;
+  width: 25px;
+  border-radius: 5px;
+  padding: 3px 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.delete-message-button {
+  border: none;
+  width: 20px;
+  border-radius: 5px;
+  padding: 3px 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.add-message-form {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.message-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.add-button,
+.cancel-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+}
+
+.start-add-button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+}
+
+/* Messages Actions */
+.messages-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.messages-button-close {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+}

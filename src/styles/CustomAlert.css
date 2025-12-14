@@ -1,0 +1,72 @@
+.custom-alert-overlay {
+  position: fixed;
+  inset: 0;
+  margin: -10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.custom-alert-box {
+  min-width: 280px;
+  max-width: 400px;
+  padding: 24px;
+  margin: 0 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-alert-message {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+  pointer-events: none;
+  user-select: none;
+}
+
+.custom-alert-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.custom-alert-button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.custom-alert-button:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

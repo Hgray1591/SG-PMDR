@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "GMarketSans";
+  src: url("/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kkukkukk";
+  src: url("/fonts/MemomentKkukkukk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RoundedFixedsys";
+  src: url("/fonts/DungGeunMo.ttf");
+}
+@font-face {
+  font-family: "ThinRounded";
+  src: url("/fonts/ThinDungGeunMo.ttf");
+}
+@font-face {
+  font-family: "Cafe24ProSlim";
+  src: url("/fonts/Cafe24PROSlim-Regular.ttf");
+}
+@font-face {
+  font-family: "KkuBulLim";
+  src: url("/fonts/BMKkubulimTTF.ttf");
+}
+@font-face {
+  font-family: "zenSerif";
+  src: url("/fonts/ZEN-SERIF-TTF-Regular.ttf");
+}
+@font-face {
+  font-family: "BookkMyungjo";
+  src: url("/fonts/BookkMyungjo_Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "GMarketSans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.app-container {
+  user-select: none;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+.widget-card {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+.drag-region button {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+
+input {
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* 둥둥 떠다니는 애니메이션 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}

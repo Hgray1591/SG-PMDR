@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Otk-Pomo",
+  "version": "2.1.0",
+  "identifier": "com.hgray.otkpomo",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Otk-Pomo",
+        "width": 300,
+        "height": 180,
+        "resizable": true,
+        "maximizable": false,
+        "alwaysOnTop": true,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "center": true,
+        "skipTaskbar": false,
+        "dragDropEnabled": false
+      },
+      {
+        "label": "settings",
+        "title": "설정",
+        "url": "settings.html",
+        "width": 350,
+        "height": 560,
+        "resizable": false,
+        "center": true,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false
+      },
+      {
+        "label": "messages",
+        "title": "메시지 설정",
+        "url": "messages.html",
+        "width": 350,
+        "height": 560,
+        "resizable": false,
+        "center": true,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "dmg"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

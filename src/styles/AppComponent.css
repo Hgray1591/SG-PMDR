@@ -1,0 +1,215 @@
+/* 드래그 영역 - 전체 창을 덮음 */
+.drag-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.messages-button {
+  position: absolute;
+  top: 5px;
+  right: 75px;
+  border: none;
+  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 20;
+  padding: 13px 20px 10px 20px;
+  line-height: 1;
+  font-family: "GMarketSans", sans-serif;
+}
+
+.apps-settings-button {
+  position: absolute;
+  top: 5px;
+  right: 32px;
+  border: none;
+  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 20;
+  padding: 13px 20px 10px 20px;
+  line-height: 1;
+  font-family: "GMarketSans", sans-serif;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  border-radius: 30%;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 20;
+  padding: 0;
+  line-height: 1;
+}
+
+/* 메인 컨텐츠 - 가로 배치 */
+.main-content {
+  padding: 10px;
+  padding-top: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  pointer-events: none;
+  position: relative;
+  z-index: 15;
+}
+
+.main-content > * {
+  pointer-events: auto;
+}
+
+/* 캐릭터 이미지 */
+.character-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 정보 영역 */
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* 타이머 */
+.timer-container {
+  text-align: center;
+}
+
+.timer-label {
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+}
+
+.timer-display {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 진행도 바 */
+.progress-container {
+  width: 100%;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  font-size: 7px;
+  opacity: 0.8;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* 컨트롤 버튼 */
+.controls-container {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.control-button {
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.control-button-primary {
+  flex: 1;
+  font-weight: bold;
+  color: white;
+}
+
+/* 통계 */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 7px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* 흔들림 애니메이션 */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  30%,
+  70% {
+    transform: translateX(5px);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.2s;
+}
