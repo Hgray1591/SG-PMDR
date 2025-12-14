@@ -1,7 +1,7 @@
 {
-  "name": "otk-pomo",
+  "name": "sg-pmdr",
   "private": true,
-  "version": "2.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

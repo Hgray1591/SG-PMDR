@@ -1,8 +1,8 @@
 [package]
-name = "otk-pomo"
-version = "2.1.0"
-description = "Otk-Pomo"
-authors = ["RestInLOV3"]
+name = "sg-pmdr"
+version = "1.0.0"
+description = "SG-PMDR"
+authors = ["이하은"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

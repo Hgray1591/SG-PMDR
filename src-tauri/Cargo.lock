@@ -2515,19 +2515,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "otk-pomo"
-version = "2.1.0"
-dependencies = [
- "font-kit",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-notification",
- "tauri-plugin-opener",
-]
-
-[[package]]
 name = "pango"
 version = "0.18.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3462,6 +3449,19 @@ checksum = "d52aa42f8fdf0fed91e5ce7f23d8138441002fa31dca008acf47e6fd4721f741"
 dependencies = [
  "nodrop",
  "stable_deref_trait",
+]
+
+[[package]]
+name = "sg-pmdr"
+version = "1.0.0"
+dependencies = [
+ "font-kit",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-notification",
+ "tauri-plugin-opener",
 ]
 
 [[package]]
